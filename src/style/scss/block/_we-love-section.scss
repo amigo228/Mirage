@@ -1,0 +1,41 @@
+.we-love-section {
+  .container {
+    max-width: 1179px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to('laptop') {
+      flex-direction: row;
+    }
+
+    .cover {
+      @include respond-to('laptop') {
+       padding-left: 79px;
+      }
+    }
+
+    .img-holder {
+      margin-bottom: 34px;
+      @include respond-to('laptop') {
+        margin-bottom: 194px;
+      }
+    }
+
+    .caption {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 32px;
+      color: $light-grey;
+      margin-bottom: 40px;
+
+      @include respond-to('laptop') {
+        font-size: 20px;
+      }
+    }
+  }
+}

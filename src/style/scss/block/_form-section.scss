@@ -1,0 +1,136 @@
+.form-section {
+  .container {
+    max-width: 1070px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond-to('laptop') {
+      justify-content: space-between;
+    }
+
+    .img-holder {
+      max-width: 250px;
+      width: 100%;
+    }
+  }
+
+  margin-bottom: 30px;
+
+  @include respond-to('laptop') {
+    margin-bottom: 160px;
+  }
+}
+
+.form {
+  max-width: 706px;
+  width: 100%;
+
+  h2 {
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: $light-grey;
+    margin-bottom: 30px;
+
+    @include respond-to('laptop') {
+      font-size: 20px;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 14px 13px 13px 60px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: $white;
+  max-width: 455px;
+  margin: 0 auto;
+
+  @include respond-to('tablet') {
+    max-width: unset;
+    margin: 0;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    max-width: 145px;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+
+    @include respond-to('mobile-s') {
+      max-width: 255px;
+      height: 54px;
+      font-size: 20px;
+    }
+
+    @include respond-to('tablet') {
+      height: 54px;
+      font-size: 20px;
+    }
+
+    &::placeholder {
+      color: $en-dirty-white;
+      font-size: 12px;
+
+      @include respond-to('mobile-s') {
+        font-size: 16px;
+      }
+    }
+
+    &:focus {
+      background-color: $white;
+    }
+
+
+  }
+
+  .btn-holder {
+
+    .btn {
+      padding: 6px;
+      font-size: 14px;
+
+      @include respond-to('tablet') {
+        padding: 12px 69px 12px 17px;
+      }
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    left: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../../img/mail.svg");
+  }
+
+  .btn-holder {
+
+    @include respond-to-desk('tablet') {
+      .btn::after {
+        display: none;
+      }
+    }
+
+  }
+}
